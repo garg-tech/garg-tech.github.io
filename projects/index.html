@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Projects — Devansh Garg</title>
+<meta name="description" content="Projects by Devansh Garg: cost-efficient LLM inference, in-network computing over quantized data, datacenter networking, and programmable data plane security on Intel Tofino.">
+<link rel="canonical" href="https://garg-tech.github.io/projects/">
+<link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/style.css">
+<script data-goatcounter="https://garg-tech.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<div class="topbar">
+  <div class="bar-inner">
+    <a class="brand" href="/">Devansh Garg</a>
+    <nav aria-label="Site">
+      <a href="/">About</a>
+      <a href="/publications/">Publications</a>
+      <a href="/projects/" aria-current="page">Projects</a>
+      <a href="/cv/">CV</a>
+    </nav>
+  </div>
+</div>
+
+<div class="page">
+  <aside class="side">
+    <img class="avatar" src="/assets/img/headshot.jpg" alt="Photo of Devansh Garg" width="168" height="168">
+    <h2>Devansh Garg</h2>
+    <p class="role">M.Tech Student, CSE, IIT Hyderabad</p>
+    <ul>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0a5 5 0 0 0-5 5c0 3.6 5 11 5 11s5-7.4 5-11a5 5 0 0 0-5-5Zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z"/></svg><span>Hyderabad, India</span></li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1 3.5h14v9H1v-9Zm1.9 1L8 8.4l5.1-3.9H2.9Z"/></svg><a href="&#109;&#97;&#105;&#108;&#116;&#111;&#58;&#99;&#115;&#50;&#53;&#109;&#116;&#101;&#99;&#104;&#49;&#50;&#48;&#50;&#50;&#64;&#105;&#105;&#116;&#104;&#46;&#97;&#99;&#46;&#105;&#110;">Email</a></li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 1.6 0 5.5l8 3.9 6-2.9v3.1h1.3V5.5L8 1.6ZM3.2 8.6v2.6c0 1.2 2.1 2.1 4.8 2.1s4.8-.9 4.8-2.1V8.6L8 11 3.2 8.6Z"/></svg><a href="https://scholar.google.com/citations?user=S8D1MAkAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5.6 3.1 1 8l4.6 4.9 1.1-1L3.2 8l3.5-3.9-1.1-1Zm4.8 0-1.1 1L12.8 8l-3.5 3.9 1.1 1L15 8l-4.6-4.9Z"/></svg><a href="https://github.com/garg-tech" target="_blank" rel="noopener">GitHub</a></li>
+      <li><svg viewBox="0 0 16 16" aria-hidden="true"><rect width="16" height="16" rx="2.5"/><text x="8" y="11.6" text-anchor="middle" font-size="8.5" font-weight="700" fill="#fff" font-family="Helvetica,Arial,sans-serif">in</text></svg><a href="https://linkedin.com/in/garg-devansh" target="_blank" rel="noopener">LinkedIn</a></li>
+    </ul>
+  </aside>
+
+  <main id="main">
+    <h1>Projects</h1>
+
+    <p>What I am working on now, and systems I have built. Papers are listed under
+    <a href="/publications/">publications</a>.</p>
+
+    <h2>Current</h2>
+
+    <div class="proj" id="inference">
+      <h3>Cost-efficient LLM inference</h3>
+      <p class="meta">Lab project · IIT Hyderabad · 2025–present</p>
+      <p>Software-systems-level optimization for LLM inference, aimed at the cost break-even point:
+      where self-hosting open-weight models becomes cheaper than paying for commercial API access.</p>
+      <p class="tags">vLLM · LLM serving · inference systems</p>
+    </div>
+
+    <div class="proj" id="in-network">
+      <h3>In-network computing over quantized data</h3>
+      <p class="meta">Course project · IIT Hyderabad · Jul–Nov 2026</p>
+      <p>Hardware support so that in-network computation can operate directly on quantized data,
+      accelerating distributed training and inference.</p>
+      <p class="tags">in-network computing · quantization · distributed training and inference</p>
+    </div>
+
+    <div class="proj" id="congestion">
+      <h3>Datacenter congestion control</h3>
+      <p class="meta">IIT Hyderabad · 2025–present</p>
+      <p>Congestion control for high-performance datacenter networks, working with DPDK and RDMA.</p>
+      <p class="tags">DPDK · RDMA · datacenter networking</p>
+    </div>
+
+    <h2>Past</h2>
+
+    <div class="proj" id="p4tval">
+      <h3>P4TVal: baseline and evaluation</h3>
+      <p class="meta">IIT Hyderabad · Aug 2024 – Apr 2025</p>
+      <p>P4TVal detects unauthorized changes to the forwarding rules in a programmable switch.
+      My part was the comparative evaluation:</p>
+      <ul>
+        <li>Implemented REV (Zhang et al., IEEE/ACM ToN 2020), the prior state of the art, in P4 on
+        BMv2 and Mininet, as the baseline P4TVal is measured against.</li>
+        <li>Compared attack-detection time as the network grows from 2 to 32 switches. P4TVal detects
+        table-rule manipulation 10× faster, and its detection time stays constant while REV's grows
+        with hop count.</li>
+        <li>Measured P4TVal's data-plane overhead on an Aurora 610 Intel Tofino switch: about 50 ns
+        added per packet, over 5,000 packets.</li>
+      </ul>
+      <p class="links"><a href="/publications/p4tval/">Paper</a><a href="https://github.com/garg-tech/p4-rev-baseline" target="_blank" rel="noopener">REV implementation</a></p>
+      <p class="tags">P4 · BMv2 · Mininet · Intel Tofino · PTF</p>
+    </div>
+
+    <div class="proj" id="p4auth-demo">
+      <h3>P4Auth live demonstration</h3>
+      <p class="meta">IIT Hyderabad · 2025</p>
+      <p>Built the live demo for P4Auth, a system that secures in-network traffic control by
+      authenticating the messages it relies on, between controller and switch and between switches.
+      The demo runs HULA load balancing in three configurations side by side: normal operation, a
+      compromised switch, and the compromised switch with P4Auth in place. Acknowledged in the paper.</p>
+      <p class="links"><a href="https://ieeexplore.ieee.org/document/11068833" target="_blank" rel="noopener">Paper (IEEE/IFIP DSN 2025)</a></p>
+      <p class="tags">P4 · BMv2 · HULA</p>
+    </div>
+
+    <div class="footer">
+      <span>Devansh Garg · IIT Hyderabad</span>
+      <span>Updated September 2026</span>
+    </div>
+  </main>
+</div>
+</body>
+</html>
