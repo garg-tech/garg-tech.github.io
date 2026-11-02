@@ -42,7 +42,7 @@
   <main id="main">
     <h1>Curriculum Vitae</h1>
 
-    <p>The same content as the <a href="/assets/Devansh_Garg_CV.pdf" target="_blank" rel="noopener">PDF version</a>. Last updated September 2026.</p>
+    <p>The same content as the <a href="/assets/Devansh_Garg_CV.pdf" target="_blank" rel="noopener">PDF version</a>. Last updated November 2026.</p>
 
     <h2>Research Interests</h2>
     <p>Systems for large-scale machine learning: improving the efficiency of training and inference.
@@ -57,7 +57,8 @@
       </div>
       <div class="entry-sub">
         <ul><li>Coursework: Advanced Data Structures, Program Verification, Security in Intelligent
-        Systems, Visual Computing, Topics in Networks</li></ul>
+        Systems, Visual Computing, Topics in Networks, Systems for ML, Practical Malware
+        Analysis</li></ul>
         <span class="when">CGPA 9.2/10</span>
       </div>
     </div>
@@ -115,12 +116,17 @@
     </div>
     <div class="entry">
       <div class="entry-head">
-        <h3>In-Network Computing over Quantized Data <span>· IIT Hyderabad, course project</span></h3>
-        <span class="when">Jul – Nov 2026</span>
+        <h3>Dedicated Dense-Sum Unit for In-Network Allreduce <span>· IIT Hyderabad, course project</span></h3>
+        <span class="when">Oct 2026 – Present</span>
       </div>
       <ul>
-        <li>Designing hardware support so that in-network computation can operate directly on quantized
-        data, accelerating distributed training and inference.</li>
+        <li>Designing a fixed-function path for dense FP32 sums to extend Flare (SC ’21), a programmable
+        RISC-V switch for in-network allreduce, keeping its cores for sparse data and custom operators.</li>
+        <li>Reproduced Flare in the PsPIN cycle-accurate simulator, matching 52 of 56 configurations
+        within ±4% of published results.</li>
+        <li>Quantified the cost of dense sums on programmable cores: Flare peaks at 54% of its
+        6.4 Tbps line rate and needs an estimated 10.6× more logic area than ideal fixed adders at line
+        rate; instruction traces attribute 73% of handler cycles to loads and stores.</li>
       </ul>
     </div>
     <div class="entry">

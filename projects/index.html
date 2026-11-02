@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Projects — Devansh Garg</title>
-<meta name="description" content="Projects by Devansh Garg: cost-efficient LLM inference, in-network computing over quantized data, datacenter networking, and programmable data plane security on Intel Tofino.">
+<meta name="description" content="Projects by Devansh Garg: cost-efficient LLM inference, in-network allreduce, datacenter networking, and programmable data plane security on Intel Tofino.">
 <link rel="canonical" href="https://garg-tech.github.io/projects/">
 <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/style.css">
@@ -56,11 +56,15 @@
     </div>
 
     <div class="proj" id="in-network">
-      <h3>In-network computing over quantized data</h3>
-      <p class="meta">Course project · IIT Hyderabad · Jul–Nov 2026</p>
-      <p>Hardware support so that in-network computation can operate directly on quantized data,
-      accelerating distributed training and inference.</p>
-      <p class="tags">in-network computing · quantization · distributed training and inference</p>
+      <h3>Dedicated dense-sum unit for in-network allreduce</h3>
+      <p class="meta">Course project · IIT Hyderabad · Oct 2026 – Present</p>
+      <p>A fixed-function path for dense FP32 sums extending Flare (SC ’21), a programmable RISC-V
+      switch for in-network allreduce, keeping its cores for sparse data and custom operators.
+      Reproduced Flare in the PsPIN cycle-accurate simulator, matching 52 of 56 configurations within
+      ±4% of published results, and quantified the cost of dense sums on programmable cores: Flare peaks
+      at 54% of its 6.4 Tbps line rate and needs an estimated 10.6× more logic area than ideal fixed
+      adders at line rate.</p>
+      <p class="tags">in-network computing · allreduce · RISC-V · distributed training</p>
     </div>
 
     <div class="proj" id="congestion">
